@@ -1,7 +1,7 @@
 :root {
-    --backroundcolor: black;
+    --backroundcolor: white;
     --logoclolor: #d49466;
-    --menucolor: white;
+    --menucolor: black;
     --hovercolor: #d49466;
 
 
@@ -48,7 +48,38 @@ list-style: none;
 .navbar_login li{
 padding :8px 12px;
                }
-
+.top{
+margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 8px 12px;
+    justify-content: space-between;
+    padding-left: 250px;
+    padding-right:250px;
+}
+.top > h2{
+    text-align: center;
+}
+.table > :not(caption) > * > * {
+    
+    align-items: center;
+    background-color: white;
+    padding: 8px 12px;
+    justify-content: space-between;
+    padding-left: 250px;
+    padding-right:250px;
+  }
+  button{
+    
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        background-color: greenyellow
+  }
+  
+  
 /*@media screen and(max-width: 768px){
 .navbar{
 flex-direction: column;
