@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MainPage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+<script src="count.js" defer></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar_logo">
@@ -37,6 +40,7 @@
             <table class="table table-striped">
                 
                 <thead>
+                   
                     <tr>
                         <th> (날짜/시간)</th>
                         <th>인원</th>
@@ -47,22 +51,32 @@
                     <tr>
                         <td> 2021-07-20/ 18:00~20:00</td>
                         <td> 9:9</td>
-                        <td> 3/18 <button type="button" class="btn btn-success">참여하기</button></td>
+                        <td>  <script language="javascript">
+                         var Nownum=0;
+                         var Totalnum=18;
+                         document.write(Nownum+"/"+Totalnum);
+                        </script>
+                         <button type="button" class="btn btn-success">참여하기</button></td>
                     </tr>
                     <tr>
                         <td> 2021-07-21/ 18:00~20:00</td>
                         <td> 9:9</td>
-                        <td> 3/18 <button type="button" class="btn btn-success">참여하기</td>
+                        <td> <script language="javascript">
+                            var Nownum=0;
+                            var Totalnum=18;
+                            document.write(Nownum+"/"+Totalnum);
+                           </script> <button type="button" class="btn btn-success">참여하기</td>
                     </tr>
                 </tbody>
                 </div>
 
             </table>
-            <div class=" container">
+            <div class=" container_middle">
                 <div class="well">
                     <div class="top">
                     <h2>경기 만들기</h2>
                     <p> 오늘 경기가 없다면 경기를 만들어 주세요</p>
+                    <p><button type="button" class="btn btn-success">경기만들기</p>
                 </div>
             </div>
             </div>
