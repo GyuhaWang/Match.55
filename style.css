@@ -20,6 +20,7 @@ a{
     align-items: center;
     background-color: var(--backroundcolor);
     padding: 8px 12px;
+    text-decoration: none;
         }
 .navbar_logo a{
 font-size: 36px;
@@ -40,6 +41,11 @@ padding: 8px 12px;
     background-color: var(--hovercolor);
     border-radius: 4px;
 }
+button:hover
+{
+    background-color: var(--hovercolor);
+    border-radius: 4px;
+}
 .navbar_login{
 display: flex;
 padding-left: 0;
@@ -49,27 +55,25 @@ list-style: none;
 padding :8px 12px;
                }
 .top{
-margin-top: 20px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    background-color: white;
     padding: 8px 12px;
-    justify-content: space-between;
+    background-color: white;
+    justify-content:space-between;
     padding-left: 250px;
     padding-right:250px;
+    text-align: justify;
 }
-.top > h2{
-    text-align: center;
+
+.container_middle button
+{
+position: relative;
+right: 30px;
+border-radius: 4px;
+margin-bottom: 5px;
 }
-.table > :not(caption) > * > * {
-    
-    align-items: center;
-    background-color: white;
-    padding: 8px 12px;
-    justify-content: space-between;
-    padding-left: 250px;
-    padding-right:250px;
-  }
+
   button{
     
         margin: 0;
