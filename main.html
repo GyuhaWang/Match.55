@@ -24,30 +24,16 @@
     }
 </script>    
 <script name=party>
-    
-    function party(name,Class,co)
-   
-    { const party = [18];
-         var i=0;
-        
-          if(i<18&&Isempty(party[i]=true))
-          {
-              party[i]="이름:"+name+"계급:"+Class+"중대:"+co;
-              i++;
-              return  party[i];
-          }
-        }
-    
-</script>
-<script name=Isempty>
-    function Isempty(arr)
-    {
-        if(Array.isArray(arr) && arr.length === 0)  {
-    return true;
-  }
+    document.getElementById("PlayerInfo").innerHTML="참가자가 없습니다.";
+    function party(name,Class,co){
+   var PlayerInfo = new Object();
+   PlayerInfo.name=name;
+   PlayerInfo.Class=Class;
+   PlayerInfo.co=co;
+ document.getElementById("PlayerInfo").innerHTML="이름:"+  PlayerInfo.name+ "계급:"  +PlayerInfo.Class+ "중대:"+  PlayerInfo.co;
     }
-
 </script>
+
 <script name= Buttoncount1> 
         var Nownum=0;
         var TotalNum=18;
@@ -125,7 +111,8 @@
                             <button type="button" onclick="count_1()" class="btn btn-success">참여하기</td>
                     </tr>
                     <tr>
-                       <td></td><p party()></p>
+                       <td><p>참가자 명단</p>
+                           <p id="PlayerInfo"></p></td>
                     </tr>
                     <tr>
                         <td> 2021-07-21/ 18:00~20:00</td>
