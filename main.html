@@ -10,8 +10,78 @@
     <link<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-<script src="count.js" defer></script>
+<script name=login>
+    function login()
+    { var message_name="이름"
+      var message_class="계급"
+      var message_co="중대"
+     
+      var result_name=prompt(message_name,'이름을 입력하세요')
+      var result_Class=prompt(message_class,'계급을 입력하세요')
+      var result_co=prompt(message_co,'중대를 입력하세요')
+
+      party(result_name,result_Class,result_co);
+    }
+</script>    
+<script name=party>
+    
+    function party(name,Class,co)
+   
+    { const party = [18];
+         var i=0;
+        
+          if(i<18&&Isempty(party[i]=true))
+          {
+              party[i]="이름:"+name+"계급:"+Class+"중대:"+co;
+              i++;
+              return  party[i];
+          }
+        }
+    
+</script>
+<script name=Isempty>
+    function Isempty(arr)
+    {
+        if(Array.isArray(arr) && arr.length === 0)  {
+    return true;
+  }
+    }
+
+</script>
+<script name= Buttoncount1> 
+        var Nownum=0;
+        var TotalNum=18;
+        document.getElementById("Buttoncount_1").innerHTMLL= Nownum+"/"+ TotalNum;
+        function count_1()
+        {
+        if(Nownum<TotalNum)
+        {
+        document.getElementById("Buttoncount_1").innerHtml=login();
+            Nownum++;
+        document.getElementById("Buttoncount_1").innerHTML= Nownum+"/"+ TotalNum;
+        }
+        else
+        document.getElementById("Buttoncount_1").innerHtml=alert("정원을 초과하였습니다.");
+        }
+    </script>
+
+<script  name=Buttoncount2> 
+    var Nownum_2=0;
+    var TotalNum_2=18;
+    document.getElementById("Buttoncount_2").innerHTMLL= Nownum_2+"/"+ TotalNum_2;
+    function count_2()
+    {
+    if(Nownum_2<TotalNum_2)
+    {
+        Nownum_2++;
+    document.getElementById("Buttoncount_2").innerHTML= Nownum_2+"/"+ TotalNum_2;
+    }
+    else
+    document.getElementById("Buttoncount_2").innerHtml=alert("정원을 초과하였습니다.");
+    }
+</script>
 </head>
+
 
 <body>
     <nav class="navbar">
@@ -51,21 +121,17 @@
                     <tr>
                         <td> 2021-07-20/ 18:00~20:00</td>
                         <td> 9:9</td>
-                        <td>  <script language="javascript">
-                         var Nownum=0;
-                         var Totalnum=18;
-                         document.write(Nownum+"/"+Totalnum);
-                        </script>
-                         <button type="button" class="btn btn-success">참여하기</button></td>
+                        <td>  <p id="Buttoncount_1"></p>
+                            <button type="button" onclick="count_1()" class="btn btn-success">참여하기</td>
+                    </tr>
+                    <tr>
+                       <td></td><p party()></p>
                     </tr>
                     <tr>
                         <td> 2021-07-21/ 18:00~20:00</td>
                         <td> 9:9</td>
-                        <td> <script language="javascript">
-                            var Nownum=0;
-                            var Totalnum=18;
-                            document.write(Nownum+"/"+Totalnum);
-                           </script> <button type="button" class="btn btn-success">참여하기</td>
+                        <td>  <p id="Buttoncount_2"></p>
+                            <button type="button" onclick="count_2()" class="btn btn-success">참여하기</td>
                     </tr>
                 </tbody>
                 </div>
