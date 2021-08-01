@@ -30,7 +30,11 @@
    PlayerInfo.name=name;
    PlayerInfo.Class=Class;
    PlayerInfo.co=co;
- document.getElementById("PlayerInfo").innerHTML="이름:"+  PlayerInfo.name+ "계급:"  +PlayerInfo.Class+ "중대:"+  PlayerInfo.co;
+  var newDiv=document.createElement("div");
+   var newContent=document.createTextNode("이름:"+  PlayerInfo.name+ "계급:"  +PlayerInfo.Class+ "중대:"+  PlayerInfo.co);
+   var content=document.getElementById("PlayerInfo");
+   content.appendChild(newContent);
+   
     }
 </script>
 
@@ -111,7 +115,7 @@
                             <button type="button" onclick="count_1()" class="btn btn-success">참여하기</td>
                     </tr>
                     <tr>
-                       <td><p>참가자 명단</p>
+                       <td><div>참가자 명단</div>
                            <p id="PlayerInfo"></p></td>
                     </tr>
                     <tr>
