@@ -24,16 +24,19 @@
     }
 </script>    
 <script name=party>
-    document.getElementById("PlayerInfo").innerHTML="참가자가 없습니다.";
+   
     function party(name,Class,co){
    var PlayerInfo = new Object();
    PlayerInfo.name=name;
    PlayerInfo.Class=Class;
-   PlayerInfo.co=co;
-  var newDiv=document.createElement("div");
+   PlayerInfo.co=co; 
+ 
+   var newDiv=document.createElement('div');
    var newContent=document.createTextNode("이름:"+  PlayerInfo.name+ "계급:"  +PlayerInfo.Class+ "중대:"+  PlayerInfo.co);
-   var content=document.getElementById("PlayerInfo");
-   content.appendChild(newContent);
+     newDiv.appendChild(newContent);
+   var divList=document.querySelector("#list");
+   divList.appendChild(newDiv);
+
    
     }
 </script>
@@ -116,7 +119,8 @@
                     </tr>
                     <tr>
                        <td><div>참가자 명단</div>
-                           <p id="PlayerInfo"></p></td>
+                        <div id="list"></div>
+                           
                     </tr>
                     <tr>
                         <td> 2021-07-21/ 18:00~20:00</td>
