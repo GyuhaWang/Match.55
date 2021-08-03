@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 <script name=login>
-    function login()
+    function login_1()
     { var message_name="이름"
       var message_class="계급"
       var message_co="중대"
@@ -20,12 +20,12 @@
       var result_Class=prompt(message_class,'계급을 입력하세요')
       var result_co=prompt(message_co,'중대를 입력하세요')
 
-      party(result_name,result_Class,result_co);
+      party_1(result_name,result_Class,result_co);
     }
 </script>    
 <script name=party>
    
-    function party(name,Class,co){
+    function party_1(name,Class,co){
    var PlayerInfo = new Object();
    PlayerInfo.name=name;
    PlayerInfo.Class=Class;
@@ -34,13 +34,43 @@
    var newDiv=document.createElement('div');
    var newContent=document.createTextNode("이름:"+  PlayerInfo.name+ "계급:"  +PlayerInfo.Class+ "중대:"+  PlayerInfo.co);
      newDiv.appendChild(newContent);
-   var divList=document.querySelector("#list");
+   var divList=document.querySelector("#list_1");
    divList.appendChild(newDiv);
 
    
     }
 </script>
 
+<script name=login>
+    function login_2()
+    { var message_name="이름"
+      var message_class="계급"
+      var message_co="중대"
+     
+      var result_name=prompt(message_name,'이름을 입력하세요')
+      var result_Class=prompt(message_class,'계급을 입력하세요')
+      var result_co=prompt(message_co,'중대를 입력하세요')
+
+      party_2(result_name,result_Class,result_co);
+    }
+</script>    
+<script name=party>
+   
+    function party_2(name,Class,co){
+   var PlayerInfo = new Object();
+   PlayerInfo.name=name;
+   PlayerInfo.Class=Class;
+   PlayerInfo.co=co; 
+ 
+   var newDiv=document.createElement('div');
+   var newContent=document.createTextNode("이름:"+  PlayerInfo.name+ "계급:"  +PlayerInfo.Class+ "중대:"+  PlayerInfo.co);
+     newDiv.appendChild(newContent);
+   var divList=document.querySelector("#list_2");
+   divList.appendChild(newDiv);
+
+   
+    }
+</script>
 <script name= Buttoncount1> 
         var Nownum=0;
         var TotalNum=18;
@@ -49,7 +79,7 @@
         {
         if(Nownum<TotalNum)
         {
-        document.getElementById("Buttoncount_1").innerHtml=login();
+        document.getElementById("Buttoncount_1").innerHtml=login_1();
             Nownum++;
         document.getElementById("Buttoncount_1").innerHTML= Nownum+"/"+ TotalNum;
         }
@@ -66,6 +96,7 @@
     {
     if(Nownum_2<TotalNum_2)
     {
+        document.getElementById("Buttoncount_1").innerHtml=login_2();
         Nownum_2++;
     document.getElementById("Buttoncount_2").innerHTML= Nownum_2+"/"+ TotalNum_2;
     }
@@ -119,7 +150,7 @@
                     </tr>
                     <tr>
                        <td><div>참가자 명단</div>
-                        <div id="list"></div>
+                        <div id="list_1"></div>
                            
                     </tr>
                     <tr>
@@ -128,6 +159,11 @@
                         <td>  <p id="Buttoncount_2"></p>
                             <button type="button" onclick="count_2()" class="btn btn-success">참여하기</td>
                     </tr>
+                    <tr>
+                        <td><div>참가자 명단</div>
+                         <div id="list_2"></div>
+                            
+                     </tr>
                 </tbody>
                 </div>
 
