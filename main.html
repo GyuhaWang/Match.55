@@ -47,13 +47,19 @@ function makeGame()
     var result_time=prompt(message_time,"날짜/시간을 입력해주세요(YYYY-MM-DD/00:00~00:00)");
     var result_join=prompt(message_join,"원하는 인원수를 입력해주세요(0명:0명)");
 
-    var newTd_time=document.createElement('td');
-    var meakTime= document.createTextNode(result_time);
-    newTd_time.appendChild(meakTime);
-    var  newTd_join= dpcument.createElement('td');
-    var makeJoin=document.createTextNode(result_join);
-    newTd_join.appendChild(makeJoin);
 
+
+    var newTd_time=document.createElement('TD');
+    newTd_time.innerHTML=result_time;
+    var newTd_join=document.createElement('TD');
+    newTd_join.innerHTML=result_join;
+    var newTd_button=document.createElement('TD');
+    var button_html='<button type="button" onclick="count_1()" class="btn btn-success">참여하기';
+    newTd_button.innerHTML=button_html;
+     
+    gameMake_1.appendChild(newTd_time);
+    gameMake_1.appendChild(newTd_join);
+    gameMake_1.appendChild(newTd_button);
 
     
 
@@ -183,7 +189,11 @@ function makeGame()
                          <div id="list_2"></div>
                             
                      </tr>
-                </tbody>
+                <tr id="gameMake_1">
+                    
+                </tr>
+                    </tbody>
+
                 </div>
 
             </table>
