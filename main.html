@@ -40,6 +40,25 @@
    
     }
 </script>
+<script>
+function makeGame()
+{   var message_time="시간";
+    var message_join="명수";
+    var result_time=prompt(message_time,"날짜/시간을 입력해주세요(YYYY-MM-DD/00:00~00:00)");
+    var result_join=prompt(message_join,"원하는 인원수를 입력해주세요(0명:0명)");
+
+    var newTd_time=document.createElement('td');
+    var meakTime= document.createTextNode(result_time);
+    newTd_time.appendChild(meakTime);
+    var  newTd_join= dpcument.createElement('td');
+    var makeJoin=document.createTextNode(result_join);
+    newTd_join.appendChild(makeJoin);
+
+
+    
+
+}
+</script>
 
 <script name=login>
     function login_2()
@@ -173,7 +192,7 @@
                     <div class="top">
                     <h2>경기 만들기</h2>
                     <p> 오늘 경기가 없다면 경기를 만들어 주세요</p>
-                    <p><button type="button" class="btn btn-success">경기만들기</p>
+                    <p><button type="button"  onclick="makeGame()"  class="btn btn-success">경기만들기</p>
                 </div>
             </div>
             </div>
