@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newMainpage</title>
+    <link<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="newMain.js"></script>  
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <h1><a herf="">Match.55</a></h1>
+        </div>
+        <div class="container_top">
+            <div class="well">
+                <div class="top">
+                <h2>경기 참여하기</h2>
+                  <p>오늘의 경기를 확인하세요</p>
+              </div>
+              
+                <table class="table table-striped">
+                        <thead>
+                   
+                                <tr>
+                                    <th> (날짜/시간)</th>
+                                    <th>인원</th>
+                                    <th>참여하기</th>
+                                </tr>
+                            </thead>
+                    <tbody id="gameMake_1"></tbody>
+                    </table>
+                    <thead>
+                            <div class=" container_middle">
+                                    <div class="well">
+                                        <div class="top">
+                                        <h2>경기 만들기</h2>
+                                        <p> 오늘 경기가 없다면 경기를 만들어 주세요</p>
+                                        <button  type="button"  onclick="makeGame()"  class="btn btn-success">경기만들기
+                                        <p id="makeGame"></p>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </thead>
+                    
+ 
+</body>
+</html>
