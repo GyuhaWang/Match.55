@@ -35,6 +35,8 @@ function party_1(name,Class,co){
      
         
          }
+         
+        
  function makeGame()
 { 
     var message_time="시간";
@@ -49,7 +51,7 @@ function party_1(name,Class,co){
     var newTd_join=document.createElement('TD');
     newTd_join.innerHTML=result_join;
     var newTd_button=document.createElement('TD');
-    var button_html='<p id="Buttoncount_1"></p><button type="button" onclick="login_1()" class="btn btn-success">참여하기';
+    var button_html='<p id="Buttoncount_1"></p><button type="button" onclick="login_1()" class="btn btn-success">참여하기 <button type="button" onclick="remove()"class="btn btn-danger class="btn-remove">경기없애기';
     newTd_button.innerHTML=button_html;
     var newTr_2=document.createElement("TR");
     var newTd_2=document.createElement("TD");
@@ -61,6 +63,7 @@ function party_1(name,Class,co){
      newTr.appendChild(newTd_button);
     gameMake_1.appendChild(newTr);
     gameMake_1.appendChild(newTr_2);
+   
 }}}
 
     
