@@ -1,0 +1,10 @@
+p.make-text
+{
+    text-align: center;
+}
+
+button.btn-remove
+{
+    position: relative;
+    right:100px;
+}
