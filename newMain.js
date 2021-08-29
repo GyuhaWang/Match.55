@@ -6,6 +6,9 @@ function login_1()
       
       const result=document.getElementById("Buttoncount_1");
       let Nownumber= result.innerText;
+     
+      Nownumber=parseInt(Nownumber);
+      
       var TotalNum=18;
       if(Nownumber<TotalNum){
       var result_name=prompt(message_name,'이름을 입력하세요')
