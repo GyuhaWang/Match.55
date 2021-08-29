@@ -3,10 +3,11 @@ function login_1()
     { var message_name="이름"
       var message_class="계급"
       var message_co="중대"
-      var Nownum=0;
-      var TotalNum=18;
       
-      if(Nownum<TotalNum){
+      const result=document.getElementById("Buttoncount_1");
+      let Nownumber= result.innerText;
+      var TotalNum=18;
+      if(Nownumber<TotalNum){
       var result_name=prompt(message_name,'이름을 입력하세요')
       if(result_name){
       var result_Class=prompt(message_class,'계급을 입력하세요')
@@ -15,12 +16,16 @@ function login_1()
       if(result_co){
         
       party_1(result_name,result_Class,result_co);
-      Nownum++;
-      document.getElementById("Buttoncount_1").innerHTML= Nownum+"/"+ TotalNum;
+      Nownumber= parseInt(Nownumber)+ 1;
+      result.innerText=Nownumber+"/"+TotalNum;
+        
+      
     }}}}
     else
     document.getElementById("Buttoncount_1").innerHtml=alert("정원을 초과하였습니다.");
     }
+    
+
 function party_1(name,Class,co){
         var PlayerInfo = new Object();
         PlayerInfo.name=name;
@@ -51,7 +56,7 @@ function party_1(name,Class,co){
     var newTd_join=document.createElement('TD');
     newTd_join.innerHTML=result_join;
     var newTd_button=document.createElement('TD');
-    var button_html='<p id="Buttoncount_1"></p><button type="button" onclick="login_1()" class="btn btn-success">참여하기 <button type="button" onclick="remove()"class="btn btn-danger class="btn-remove">경기없애기';
+    var button_html='<p  id="Buttoncount_1">0</p><button type="button" onclick="login_1()" class="btn btn-success">참여하기 <button type="button" onclick="remove()"class="btn btn-danger class="btn-remove">경기없애기';
     newTd_button.innerHTML=button_html;
     var newTr_2=document.createElement("TR");
     var newTd_2=document.createElement("TD");
